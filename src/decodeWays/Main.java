@@ -3,6 +3,7 @@ package decodeWays;
 public class Main {
 	public static void main(String[] args) {
 		String s = "226";
+		// String s = "31";
 		
 		System.out.println("Input: " + s);
 		

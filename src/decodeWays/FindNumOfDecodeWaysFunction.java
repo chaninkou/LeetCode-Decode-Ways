@@ -17,10 +17,10 @@ public class FindNumOfDecodeWaysFunction {
 		
 		// Starting from index = 2 because dp[0] and dp[1] already fill in
 		for(int i = 2; i <= s.length(); i++){
-			// Single digit
+			// Single digit, if its 0, it doesn't count as decode
 			int oneDigit = Integer.valueOf(s.substring(i - 1, i));
 			
-			// double digit
+			// double digit, if its over 26 or until 10, it doesn't count as decode
 			int twoDigit = Integer.valueOf(s.substring(i - 2, i));
 			
 			// since onedigit could only be in between 1-9

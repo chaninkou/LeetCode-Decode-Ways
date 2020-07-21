@@ -1,4 +1,4 @@
-package decodeWays;
+package leetcode91;
 
 public class FindNumOfDecodeWaysFunction {
 	public int numDecodings(String s) {
@@ -20,7 +20,7 @@ public class FindNumOfDecodeWaysFunction {
 			// Single digit, if its 0, it doesn't count as decode
 			int oneDigit = Integer.valueOf(s.substring(i - 1, i));
 			
-			// double digit, if its over 26 or until 10, it doesn't count as decode
+			// double digit, if its over 26 or less than 10, it doesn't count as decode
 			int twoDigit = Integer.valueOf(s.substring(i - 2, i));
 			
 			// since onedigit could only be in between 1-9

@@ -23,12 +23,12 @@ public class FindNumOfDecodeWaysFunction {
 			// double digit, if its over 26 or less than 10, it doesn't count as decode
 			int twoDigit = Integer.valueOf(s.substring(i - 2, i));
 			
-			// since onedigit could only be in between 1-9
+			// one digit could only be in between 1-9
 			if(oneDigit >= 1){
 				dp[i] += dp[i - 1];
 			}
 			
-			// can not pass 26 and under 10
+			// double digits can not pass 26 or under 10
 			if(twoDigit >= 10 && twoDigit <= 26){
 				dp[i] += dp[i - 2];
 			}
